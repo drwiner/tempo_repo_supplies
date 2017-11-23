@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<story name="600924233" xmlns="http://liquidnarrative.csc.ncsu.edu/impulse/v1.336">
+  <actions>
+
+    <action type="spawn-hero" name="step1">
+      <property name="location" value="(0,0)"/>
+      <property name="actor" value="Pudge"/>
+      <property name="time" value="0-2"/>
+    </action>
+	
+	<action type="initialize-animation" name="step2">
+      <property name="actor" value="Door"/>
+	  <property name="location" value = "(0,20)"/>
+	  <property name="action" value="closed"/>
+      <property name="time" value="10-30"/>
+    </action>
+	
+	<action type="move" name="step3">
+        <property name="origin" value="(0, 0)"/>
+        <property name="destination" value="(0, 15)"/>
+        <property name="actor" value="Pudge"/>
+        <property name="time" value="5-2000"/>
+      </action>
+	  
+	
+	
+	<!-- move away from door-->
+	<action type="rotate" name="step6">
+        <property name="start-angle" value="0"/>
+        <property name="end-angle" value="180"/>
+        <property name="actor" value="Pudge"/>
+        <property name="time" value="3800-4000"/>
+      </action>
+	
+	<action type="walk" name="step7">
+        <property name="origin" value="(0, 15)"/>
+        <property name="destination" value="(0, 10)"/>
+        <property name="actor" value="Pudge"/>
+        <property name="time" value="4300-5700"/>
+      </action>
+	  
+
+	<action type="rotate" name="step9">
+        <property name="start-angle" value="180"/>
+        <property name="end-angle" value="0"/>
+        <property name="actor" value="Pudge"/>
+        <property name="time" value="6300-6400"/>
+      </action>
+      
+
+	 <action type="die" name="step1001">
+      <property name="actor" value="Pudge"/>
+      <property name="time" value="10500-14000"/>
+    </action>
+	
+
+  </actions>
+  <action-types>
+    <action-type name="Actions">
+      <action-type-ref name="walk"/>
+      <action-type-ref name="rotate"/>
+      <action-type-ref name="die"/>
+      <action-type-ref name="spawn-hero"/>
+      <action-type-ref name="has-location"/>
+      <action-type-ref name="idle"/>
+	  <action-type-ref name="initialize-animation"/>
+    </action-type>
+    
+    <action-type name="has-location">
+      <action-type-ref name="spawn-hero"/>
+    </action-type>
+
+
+
+  </action-types>
+  <action-properties>
+    <action-property name="origin" action="move" range="coordinate2d"/>
+
+    <action-property name="targets" action="has-targets" range="P(A)"/>
+    <action-property name="destination" action="move" range="coordinate2d"/>
+    <action-property name="start-angle" action="rotate" range="y-degrees"/>
+    <action-property name="actor" action="Actions" range="A"/>
+    <action-property name="source" action="has-source" range="A"/>
+    <action-property name="location" action="has-location" range="coordinate2d"/>
+    <action-property name="end-angle" action="rotate" range="y-degrees"/>
+    <action-property name="time" action="Actions" range="T"/>
+	<action-property name="action" action="spawn-hero" range="string"/>
+	<action-property name="action" action="initialize-animation" range="string"/>
+	<action-property name="location" action="initialize-animation" range="coordinate2d"/>
+  </action-properties>
+  <objects>
+     
+  </objects>
+  <sentences>
+  </sentences>
+</story>

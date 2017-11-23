@@ -1,0 +1,134 @@
+<cinematicModel xmlns="http://liquidnarrative.csc.ncsu.edu/cinematicModel/v0.1" millisPerTick="1" domainDistancePerEngineDistance="1">
+<!--<cinematicModel xmlns="http://liquidnarrative.csc.ncsu.edu/cinematicModel/v0.1" millisPerTick="33" domainDistancePerEngineDistance="80">-->
+  <smartModelSettings maxActorSearchDepth="2" maxAnimationSearchDepth="2" />
+
+  <domainActions>
+
+    <domainAction name="die" >
+      <params>
+        <param name="actor" />
+      </params>
+      <animateActions>
+        <animateAction name="die" actorNameParamName="actor" endingAction="dead"/>
+      </animateActions>
+      <createActions/>
+      <destroyActions/>
+      <rotateActions/>
+      <translateActions/>
+    </domainAction>
+	
+    <domainAction name="idle" >
+      <params>
+        <param name="actor" />
+      </params>
+      <animateActions>
+        <animateAction name="idle" actorNameParamName="actor"/>
+      </animateActions>
+      <createActions/>
+      <destroyActions/>
+      <rotateActions/>
+      <translateActions/>
+    </domainAction>
+	
+    <domainAction name="spawn-hero" >
+      <params>
+        <param name="actor" />
+        <param name="location" />
+      </params>
+      <createActions>
+        <createAction actorNameParamName="actor" originParamName="location" />
+      </createActions>
+      <destroyActions/>
+      <rotateActions/>
+      <translateActions/>
+      <animateActions/>
+
+    </domainAction>
+	
+	<domainAction name="initialize-animation" >
+      <params>
+        <param name="actor" />
+		<param name="location"/>
+		<param name="action"/>
+      </params>
+      <createActions>
+        <createAction actorNameParamName="actor" originParamName="location" />
+      </createActions>
+      <destroyActions/>
+      <rotateActions/>
+      <translateActions/>
+      <animateActions>
+		<animateAction name="action" actorNameParamName="actor" effector="false"/>
+	  </animateActions>
+    </domainAction>
+	
+
+    <domainAction name="walk" >
+      <params>
+        <param name="actor" />
+        <param name="destination" />
+        <param name="origin" />
+      </params>
+      <createActions/>
+      <destroyActions/>
+      <translateActions>
+        <translateAction  actorNameParamName="actor" destinationParamName="destination" originParamName="origin"/>
+      </translateActions>
+      <animateActions>
+        <animateAction  name="walk" actorNameParamName="actor" effector="false"/>
+      </animateActions>
+      <rotateActions/>
+    </domainAction>
+	
+    <domainAction name="rotate">
+      <params>
+        <param name="actor" />
+        <param name="end-angle" />
+      </params>
+      <createActions/>
+      <destroyActions/>
+      <translateActions/>
+      <rotateActions>
+        <rotateAction actorNameParamName="actor" destinationParamName="end-angle" maxDuration="400"/>
+      </rotateActions>
+      <animateActions/>
+    </domainAction>   
+  </domainActions>
+  
+  <actors>
+    <actor name="cowboy" model="char02.prefab" >
+      <animationMappings>
+        <animationMapping animateActionName="observe" animationName="idle" loopAnimation="true" />
+        <animationMapping animateActionName="walk" animationName="cm_walk" loopAnimation="true" />
+      </animationMappings>
+    </actor>
+
+  </actors>
+  
+  <animations>
+    
+    <animation fileName="humanoid_sneak.fbx" name="sneak">
+      <animationIndices>
+        <animationIndex name="sneakAWhile" timeOffset ="2200"/>
+        <animationIndex name="sneakAWhileMore" timeOffset ="2220"/>
+      </animationIndices>
+    </animation>
+	
+    <animation fileName="die.fbx" name="die">
+      <animationIndices>
+        <animationIndex name="onTheGround" timeOffset ="3125"/>
+      </animationIndices>
+    </animation>
+	
+	
+	 <animation fileName="dead.fbx" name="dead">
+      <animationIndices/>
+    </animation>
+	
+	
+    <animation fileName="humanoid_idle.fbx" name="idle">
+      <animationIndices/>
+    </animation>
+  </animations>
+  
+</cinematicModel>

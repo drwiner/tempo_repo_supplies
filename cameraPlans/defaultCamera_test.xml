@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cameraPlan xmlns="http://liquidnarrative.csc.ncsu.edu/oshmirto/v0.1">
+  <blocks>
+  
+      <block storyTime="0">
+      <shotFragments>
+      
+        <shotFragment anchor="0,-5" duration="5000" focus="Pudge" f-stop ="22" lens ="25mm" shake ="0">
+          <angle angleSetting="High" target="Pudge"/>
+          <framings/>
+          <movements>
+            <movement type="Focus" directive="With" subject="Pudge"/>
+            <movement type="Tilt" directive="With" subject="Pudge" />
+            <movement type="Pan" directive="With" subject="Pudge"/>
+          </movements>
+        </shotFragment>
+      
+      </shotFragments>
+    </block>
+   
+    <block storyTime="0">
+      <shotFragments>
+        <shotFragment anchor="0,-5" duration="5000" focus="Pudge" f-stop ="22" lens ="25mm" shake ="0">
+          <framings/>
+		   <angle angleSetting="Medium" target="Pudge"/>
+          <movements>
+            <movement type="Focus" directive="With" subject="Pudge"/>
+            <movement type="Pan" directive="With" subject="Pudge"/>
+          </movements>
+        </shotFragment>
+      </shotFragments>
+    </block>
+	
+	<block storyTime="0">
+      <shotFragments>
+        <shotFragment anchor="0,-5" duration="5000" focus="Pudge" f-stop ="22" lens ="25mm" shake ="0">
+          <framings/>
+		   <angle angleSetting="Low" target="Pudge"/>
+          <movements>
+            <movement type="Focus" directive="With" subject="Pudge"/>
+            <movement type="Tilt" directive="With" subject="Pudge"/>
+          </movements>
+        </shotFragment>
+      </shotFragments>
+    </block>
+	
+	<block storyTime="0">
+      <shotFragments>
+        <shotFragment anchor="-6.14,1" duration="2000" focus="Pudge" f-stop ="22" lens ="25mm" shake ="0">
+          <framings/>
+		  <angle angleSetting="High" target="Pudge"/>
+          <movements>
+            <movement type="Focus" directive="With" subject="Pudge"/>
+           <movement type="Tilt" directive="With" subject="Pudge" />
+        <!--    <movement type="Pan" directive="With" subject="Pudge"/>-->
+          </movements>
+        </shotFragment>
+		<shotFragment anchor="-6.14,1" duration="2000" focus="Pudge" f-stop ="22" lens ="25mm" shake ="0">
+          <framings/>
+		   <angle angleSetting="High" target="Pudge"/>
+          <movements>
+            <movement type="Focus" directive="With" subject="Pudge"/>
+          <!--   <movement type="Tilt" directive="With" subject="Pudge" />-->
+           <movement type="Pan" directive="With" subject="Pudge"/>
+          </movements>
+        </shotFragment>
+		<shotFragment anchor="-6.14,1" duration="2000" focus="Pudge" f-stop ="22" lens ="25mm" shake ="0">
+          <framings/>
+		   <angle angleSetting="High" target="Pudge"/>
+          <movements>
+            <movement type="Focus" directive="With" subject="Pudge"/>
+           <movement type="Tilt" directive="With" subject="Pudge" />
+          </movements>
+        </shotFragment>
+      </shotFragments>
+    </block>
+	
+    <block storyTime="0">
+      <shotFragments>
+        <shotFragment anchor="-6.14,-2.02" duration="4000" focus="Pudge" f-stop ="22" lens ="25mm" shake ="0">
+          <framings/>
+		  <angle angleSetting="High" target="Pudge"/>
+          <movements>
+            <movement type="Focus" directive="With" subject="Pudge"/>
+          <movement type="Tilt" directive="With" subject="Pudge" />
+          <movement type="Pan" directive="With" subject="Pudge"/>
+          </movements>
+		 
+        </shotFragment>
+        <shotFragment anchor="0,-5" duration="10000" focus="Pudge" f-stop ="22" lens ="25mm" shake ="0">
+          <framings/>
+		  <angle angleSetting="High" target="Pudge"/>
+          <movements>
+            <movement type="Focus" directive="With" subject="Pudge"/>
+            <movement type="Tilt" directive="With" subject="Pudge" />
+           <movement type="Pan" directive="With" subject="Pudge"/>
+          </movements>
+        </shotFragment>
+      </shotFragments>
+    </block>
+
+  </blocks>
+</cameraPlan>
